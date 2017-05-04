@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "ImputePrepSanger version 1.1: This is a script to create vcf files for imputation on the Sanger servers"
+echo "This is a script to run a pcev analysis from the R package."
 
 Y_file=$1
 X_file=$2
@@ -29,7 +29,5 @@ echo "== Run reportRedaction =="
 if [ "$?" != "0" ]; then
   error_exit "Error while writing the report."
 fi
-
-echo "The pipeline was run successfully."
 
 
