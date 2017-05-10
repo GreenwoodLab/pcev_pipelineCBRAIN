@@ -6,6 +6,8 @@ Y_file=$1
 X_file=$2
 C_file=$3
 
+Output="output"
+
 PROGNAME=$(basename $0)
 
 function error_exit
@@ -29,5 +31,14 @@ echo "== Run reportRedaction =="
 if [ "$?" != "0" ]; then
   error_exit "Error while writing the report."
 fi
+
+mkdir $Output
+mv "SamplesKept.txt"    $Output
+mv "FinalReport.txt"    $Output
+mv "resultsScreen.txt"  $Output
+mv "Results_pvalue.txt" $Output
+mv "Results_variableImportanceFactors.csv" $Output
+
+
 
 
