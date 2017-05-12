@@ -5,7 +5,7 @@ MAINTAINER Marie Forest <marie.forest@ladydavis.ca>
 # Install prerequisite
 RUN yum update  -y
 
-COPY . pcevCBRAIN
+COPY . 
 
 # Install basic packages
 RUN yum install -y unzip \
@@ -20,6 +20,8 @@ RUN yum install -y unzip \
 #RUN echo 'install.packages(c("pcev"), repos= "http://cran.us.r-project.org")' > /tmp/packages.R
 #RUN Rscript /tmp/packages.R
 
-RUN ls
-#RUN chmod 755 /pcevCBRAIN/run_pcevCBRAIN.sh \
-#                    && cp /pcevCBRAIN/run_pcevCBRAIN.sh /bin/
+
+RUN chmod 755 run_pcevCBRAIN.sh \
+                    && cp run_pcevCBRAIN.sh /bin/
+                    
+                    
