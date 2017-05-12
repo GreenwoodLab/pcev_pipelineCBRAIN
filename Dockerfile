@@ -17,5 +17,5 @@ RUN yum install -y  R
 RUN echo 'install.packages(c("pcev"), repos= "http://cran.us.r-project.org")' > /tmp/packages.R
 RUN Rscript /tmp/packages.R
 
-RUN chmod 755 /pcev_pipelineCBRAIN/imputePrep_script.sh \
-                    && cp /pcev_pipelineCBRAIN/imputePrep_script.sh /bin/
+RUN chmod 755 /pcev_pipelineCBRAIN/run_pcevCBRAIN.sh \
+                    && cp /pcev_pipelineCBRAIN/run_pcevCBRAIN.sh /bin/
