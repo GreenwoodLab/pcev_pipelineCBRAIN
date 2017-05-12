@@ -14,7 +14,7 @@ RUN yum install -y unzip \
                    java-1.8.0-openjdk-headless 
 
 
-RUN yum install -y  R
+qRUN yum install -y  R
 
 # Install all other R packages
 RUN echo 'install.packages(c("pcev"), repos= "http://cran.us.r-project.org")' > /tmp/packages.R
