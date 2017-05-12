@@ -5,7 +5,7 @@ MAINTAINER Marie Forest <marie.forest@ladydavis.ca>
 # Install prerequisite
 RUN yum update  -y
 
-COPY . 
+COPY . .
 
 # Install basic packages
 RUN yum install -y unzip \
