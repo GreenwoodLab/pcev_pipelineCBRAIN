@@ -11,7 +11,7 @@ where $B$ and $\Gamma$ are $p\times q$ and $p\times r$ matrices of regression co
 
 This tool returns a overall p-value for a test of association between all the variable in $X$ and all the variable in $Y$. It also return a vector of variable importance factors (VIMP) of length $p$.
 
-> The VIMP can serve as surrogates for the univariate p-values when it comes to identifying the most important response variables.
+> The VIMP can serve as surrogates for the univariate p-values when it comes to identifying the most important response variables. 
 
 ### Description of the pipeline
 
