@@ -2,11 +2,12 @@
 
 echo "This is a script to run a pcev analysis from the R package."
 
-Y_file=$1
-X_file=$2
-C_file=$3
+Output=$1
+Y_file=$2
+X_file=$3
+C_file=$4
 
-Output="output"
+
 
 PROGNAME=$(basename $0)
 
@@ -27,7 +28,7 @@ if [ "$?" != "0" ]; then
 fi
 
 echo "== Run reportRedaction =="
-./reportRedaction.sh 
+reportRedaction.sh 
 if [ "$?" != "0" ]; then
   error_exit "Error while writing the report."
 fi
