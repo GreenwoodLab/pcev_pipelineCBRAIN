@@ -22,7 +22,7 @@ function error_exit
 	exit 1
 }
 echo "== Run the R script =="
-Rscript pcev_for_cbrain.R $Y_file $X_file $C_file | tee "resultsScreen.txt"
+Rscript /pcev_CBRAIN/pcev_for_cbrain.R $Y_file $X_file $C_file | tee "resultsScreen.txt"
 if [ "$?" != "0" ]; then
   error_exit "Error while running the R script."
 fi
