@@ -1,6 +1,6 @@
 FROM centos
 
-MAINTAINER Marie Forest <marie.forest@ladydavis.ca>
+MAINTAINER Natacha Beck <natacha.beck@mcgill.ca>
 
 # Install prerequisite
 RUN yum update  -y
@@ -26,6 +26,10 @@ RUN chmod 755 pcev_CBRAIN/run_pcevCBRAIN.sh \
                     
 RUN chmod 755 pcev_CBRAIN/reportRedaction.sh \
                     && cp pcev_CBRAIN/reportRedaction.sh /bin/
+
+RUN chmod 755 pcev_CBRAIN/pcev_for_cbrain.R \
+                   && cp pcev_CBRAIN/pcev_for_cbrain.R /bin/
+
 
 WORKDIR /pcev_CBRAIN/                    
                     
